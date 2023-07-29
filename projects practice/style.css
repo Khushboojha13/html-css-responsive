@@ -1,0 +1,172 @@
+.flex{
+    display:flex;
+}
+
+.main{
+   /* height:100%; */
+    min-height:100vh; /*this will distort everything in our website b/c when we make any element min-height uska koi bhi children % me nahi le sakta*/
+    width:100%;
+    overflow: hidden;
+}
+.top{
+    background-image: url("tim-mossholder-tq8Cuap8_wY-unsplash.jpg"); 
+    background-size: cover; 
+    background-position: 50% 30%;
+    width:100%;
+   /* height:50%; */
+   min-height:60vh;
+}
+
+.bottom{
+    width:100%;
+   /* height:50%; */
+   min-height:40vh;
+}
+.overlay{  /* overlay here means we are adding a shadow over image*/
+    position:relative; /*here overlay is relative to its parent that is top here and we want to move text over it so we will make texr ko absolute ham margin se acha hai poistions use kare move karena ke liye*/
+    width:100%;
+    /*height:100%; */
+    /*min-height:100vh; */
+    min-height:inherit;  /* ye apne parent se top se min-height inherit kar lega height and jitni height top ki hogi utni hi overlay ki ho jayegi */
+
+    background-color: rgba(190, 187, 187, 0.306);
+}
+.text h1{
+    font-size: 4vw;
+    font-weight: bold;
+    color:white;
+}
+.text{
+    align-items: center;
+    width:100%;
+    position:absolute; /*position absolute se text ka box overlay pe float karega */
+    bottom:20%;
+    padding:0 12vh;
+    justify-content: space-between;
+}
+
+.textright{
+    width:60%;
+    height:80%;
+    margin-inline: 12px;
+   /* justify-content: space-between; */
+    margin-inline: 28px;
+}
+.textright p{
+    width:40%;
+    font-weight: bold;
+    font-size:12x;
+    color: aliceblue;
+}
+
+.box1{
+    /*height:100%; */
+    min-height: inherit;
+    width:25%;
+    background-image: url("daniel-k-cheung-B7N0IjiIJYo-unsplash.jpg");
+    background-size: cover;
+    border: 6px solid whitesmoke;
+}
+
+.box2{
+   /* height:100%; */
+   min-height: inherit;
+    width:25%;
+    background-image: url("gracia-dharma-qTlbO6mkQH0-unsplash.jpg");
+    border: 6px solid whitesmoke;
+    background-size: cover;
+}
+.box3{
+   /* height:100%; */
+   min-height: inherit;
+    width:20%;
+    background-image: url("");
+    background-size: cover;
+}
+.box4{
+   /* height:100%; */
+   min-height: inherit;
+    width:30%;
+    background-color: black;
+    border: 6px solid whitesmoke;
+}
+.box4{
+    flex-direction: column;
+}
+
+.notify img{
+    height:40%;
+    width:40%;
+    border-radius: 50%;
+    background-color: brown;
+}
+.notify{
+    align-items: center;
+    margin-top: 20%;
+    gap:12px;
+}
+.notify p{
+   
+    color:antiquewhite;
+    font-size: 16px;
+}
+
+.box3{
+    flex-direction: column;
+    border: 6px solid whitesmoke;
+}
+.box31{
+      width:100%;
+     /* height: 40%; */
+     min-height: 40vh;
+      background-image: url("rebecca-campbell-IkXfsjNeJ3w-unsplash.jpg");
+      background-size: cover;
+}
+
+.box32{
+    width:100%;
+  /*  height:60%; */
+  min-height: 60vh;
+    background-image: url("ben-white-qDY9ahp0Mto-unsplash.jpg");
+    background-size: cover;
+}
+
+
+@media(max-width:500px){
+    .bottom{
+        flex-direction: column;
+    }
+    .box1{
+        width:100%;
+    }
+    .box2{
+        width:100%;
+    }
+    .box3{
+        width:100%;
+        flex-direction: column;
+    }
+
+    .box4{
+        width:100%;
+    }
+    .notify{
+        flex-direction: column;
+    }
+    
+    .text{
+        margin-top: 80%;
+        flex-direction: column;
+    align-items: flex-start;
+    }
+    .textright{
+    
+        flex-direction: column;
+    }
+    .overlay .textright p{
+        width:initial;
+    }
+   .overlay .text h1{
+    font-size: 10vw;
+   }
+}
